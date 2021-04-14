@@ -171,12 +171,14 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(array,flavor){
-    for(let i = 0; i < array.length; i++)
-    if(array[i].includes(flavor)){
-        console.log(array);
-        return array
+function filterByWord(array, flavor) {
+    let newFlavor = []
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].includes(flavor)) {
+            newFlavor.push(array[i])
+        }
     }
+    return newFlavor
 }
 
 ///console.log(cities[i].includes('City'));
